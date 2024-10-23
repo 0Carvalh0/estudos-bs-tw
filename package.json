@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
+  },
+  "scripts": {
+    "build": "npx tailwindcss -i ./TW_Tiago-Matos/input.css -o ./TW_Tiago-Matos/output.css --watch"
+  }
+}
