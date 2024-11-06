@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="https://bradlc.gallerycdn.vsassets.io/extensions/bradlc/vscode-tailwindcss/0.2.0/1558040563649/Microsoft.VisualStudio.Services.Icons.Default" type="image/x-icon">
     <title>TESTE TailWind</title>
 
     <!-- TailWind CSS -->
@@ -31,7 +32,7 @@
     </p>
 
     <div class="space-x-9 flex p-8 max-w-full bg-blue-900 bg-opacity-40">
-      <div class="bg-red-500 max-w-md p-4">
+      <div class="bg-red-500 min-w-96 max-w-md p-4">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim
         voluptates eum quisquam amet sequi atque nam. Veritatis consequatur ipsa
         voluptates maiores. Neque officiis, voluptate natus minima obcaecati sit
@@ -58,7 +59,7 @@
       ducimus?
     </div>
     <div
-      class="m-5 p-4 gap-2 border-4 rounded-3xl border-red-700 flex flex-col items-center text-2xl"
+      class="m-5 p-4 gap-2 border-4 rounded-3xl max-w-screen-md border-red-700 flex flex-col items-center text-2xl"
     >
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores nihil
       neque cumque labore, minus officiis inventore sit eveniet vero fugit
@@ -71,12 +72,10 @@
         Salvar
       </button>
     </div>
-    <div class="flex justify-around p-8 max-w-screen-xl">
-      <div class="bg-blue-600 w-1/6 h-40"></div>
-      <div class="bg-red-600 w-1/6 h-40"></div>
-      <div class="bg-yellow-600 w-1/6 h-40"></div>
-      <div class="bg-green-600 w-1/6 h-40"></div>
-      <div class="bg-pink-600 w-1/6 h-40"></div>
+    <div class="flex flex-wrap gap-3 py-4 px-2">
+      <div class="bg-gradient-to-tr from-blue-600 to-red-500 grow shrink basis-1/5 min-w-80 h-40"></div>
+      <div class="bg-gradient-to-tr from-yellow-500 to-purple-500 grow shrink basis-1/2 min-w-80 h-40"></div>
+      <div class="bg-gradient-to-tr from-green-600 to-rose-500 grow shrink basis-1/5 min-w-80 h-40"></div>
     </div>
   </body>
 </html>
