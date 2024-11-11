@@ -3,6 +3,7 @@ module.exports = {
   content: ["./*.html"],
   theme: {
     extend: {
+      darkMode: ["selector"],
       colors: {
         "custom-purple": {
           200: "#D9C3FF",
@@ -12,10 +13,10 @@ module.exports = {
         },
       },
       spacing: {
-        "extremamentexl": "4rem",
-      }
+        extremamentexl: "4rem",
+      },
     },
   },
   plugins: [],
-}
+};
 
