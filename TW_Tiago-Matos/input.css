@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .meuEstiloCustomizado {
+    @apply bg-custom-purple-500 font-bold p-4 mt-5;
+  }
+}
