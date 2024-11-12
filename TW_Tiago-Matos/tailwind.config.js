@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "selector",
   content: ["./*.html"],
   theme: {
     extend: {
-      darkMode: ["selector"],
       colors: {
         "custom-purple": {
           200: "#D9C3FF",
@@ -19,4 +19,3 @@ module.exports = {
   },
   plugins: [],
 };
-
