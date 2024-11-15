@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,6 +13,7 @@
 
     <link
       rel="stylesheet"
+      9
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
       integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous"
@@ -23,12 +24,44 @@
     <link rel="stylesheet" href="./output.css" />
   </head>
 
-  <body class="bg-gray-100 dark:bg-gray-900">
-    <button id="darkBtn" class="dark:text-white fixed right-4 top-4 text-2xl">
+  <body class="bg-gray-100 dark:bg-gray-900 space-y-4 py-8">
+    <button id="darkBtn" class="dark:text-white fixed right-4 top-4 text-3xl">
       <i class="fa-solid fa-moon"></i>
     </button>
 
-    <section class="container mx-auto px-4 py-2 space-y-4">
+    <section
+      id="container__ButtonComponent"
+      class="container mx-auto px-4 py-2 space-y-4"
+    >
+      <h1 class="font-bold text-xl dark:text-white">Button Component</h1>
+
+      <div class="container space-x-2">
+        <button
+          class="bg-sky-500 hover:bg-sky-600 text-white dark:text-black text-sm px-3 py-1 rounded shadow active:ring-2 active:scale-90"
+        >
+          Salvar
+        </button>
+
+        <button
+          class="bg-sky-500 hover:bg-sky-600 text-white dark:text-black text-base px-5 py-2 rounded shadow active:ring-2 active:scale-90"
+        >
+          Salvar
+        </button>
+
+        <button
+          class="bg-sky-500 hover:bg-sky-600 text-white dark:text-black text-lg px-6 py-3 rounded shadow active:ring-2 active:scale-90"
+        >
+          Salvar
+        </button>
+      </div>
+    </section>
+
+    <hr />
+
+    <section
+      id="container__CardComponent"
+      class="container mx-auto px-4 py-2 space-y-4"
+    >
       <h1 class="font-bold text-xl dark:text-white">Card Component</h1>
 
       <div
