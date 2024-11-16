@@ -30,6 +30,57 @@
     </button>
 
     <section
+      id="container__inputComponent"
+      class="container mx-auto px-4 py-2 space-y-2"
+    >
+      <h1 class="font-bold text-xl dark:text-white">Input Component</h1>
+
+      <div class="flex flex-col gap-2">
+        <input
+          type="text"
+          class="dark:bg-gray-800 dark:text-white border-2 border-gray-200 dark:border-gray-700 focus:border-sky-500 focus:ring-2 focus:ring-sky-500 focus:ring-opacity-10 px-2 py-1 text-sm rounded-md transition duration-200 ease-in-out focus:outline-none placeholder:opacity-50"
+          placeholder="Digite algo..."
+        />
+
+        <input
+          type="text"
+          class="dark:bg-gray-800 dark:text-white border-2 border-gray-200 dark:border-gray-700 focus:border-sky-500 focus:ring-2 focus:ring-sky-500 focus:ring-opacity-10 px-3 py-2 text-base rounded-md transition duration-200 ease-in-out focus:outline-none placeholder:opacity-50"
+          placeholder="Digite algo..."
+        />
+
+        <input
+          type="text"
+          class="dark:bg-gray-800 dark:text-white border-2 border-gray-200 dark:border-gray-700 focus:border-sky-500 focus:ring-2 focus:ring-sky-500 focus:ring-opacity-10 px-4 py-2 text-lg rounded-md transition duration-200 ease-in-out focus:outline-none placeholder:opacity-50"
+          placeholder="Digite algo..."
+        />
+
+        <div class="flex flex-col md:flex-row gap-2 w-full">
+          <div
+            class="flex justify-between items-center gap-4 bg-white dark:bg-gray-800 dark:text-white border-2 border-gray-200 dark:border-gray-700 focus-within:border-sky-500 focus-within:ring-2 focus-within:ring-sky-500 focus-within:ring-opacity-10 px-4 py-2 text-lg rounded-md transition duration-200 ease-in-out flex-1"
+          >
+            <input
+              type="password"
+              id="input__password"
+              class="w-full bg-transparent focus:outline-none placeholder:opacity-50"
+              placeholder="Digite sua senha..."
+            />
+            <i
+              id="button__showPassword"
+              class="fa-solid fa-eye text-xl select-none"
+            ></i>
+          </div>
+          <input
+            type="number"
+            class="dark:bg-gray-800 dark:text-white border-2 border-gray-200 dark:border-gray-700 focus:border-sky-500 focus:ring-2 focus:ring-sky-500 focus:ring-opacity-10 px-4 py-2 text-lg rounded-md transition duration-200 ease-in-out flex-1 focus:outline-none placeholder:opacity-50"
+            placeholder="Digite um número..."
+          />
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section
       id="container__badgeComponent"
       class="container mx-auto px-4 py-2 space-y-2"
     >
@@ -128,20 +179,31 @@
           perferendis pariatur? Aperiam dolore illum sint ea impedit animi
           quidem officiis quaerat?
         </p>
-        <footer class="bg-gray-100 dark:bg-gray-900 dark:text-white p-4">
-          Rodapé
-        </footer>
+        <footer class="dark:text-white font-semibold p-4">Rodapé</footer>
       </div>
     </section>
 
     <script>
       const darkBtn = document.getElementById("darkBtn");
+      const input__password = document.getElementById("input__password");
+      const button__showPassword = document.getElementById(
+        "button__showPassword"
+      );
 
       darkBtn.addEventListener("click", () => {
         document.querySelector("html").classList.toggle("dark");
+        darkBtn.querySelector("i").classList.replace("fa-moon", "fa-sun");
+        darkBtn.querySelector("i").classList.replace("fa-sun", "fa-moon");
+      });
 
-        darkBtn.querySelector("i").classList.toggle("fa-moon");
-        darkBtn.querySelector("i").classList.toggle("fa-sun");
+      button__showPassword.addEventListener("click", () => {
+        if (input__password.type === "password") {
+          input__password.type = "text";
+          button__showPassword.classList.replace("fa-eye", "fa-eye-slash");
+        } else {
+          input__password.type = "password";
+          button__showPassword.classList.replace("fa-eye-slash", "fa-eye");
+        }
       });
     </script>
   </body>
