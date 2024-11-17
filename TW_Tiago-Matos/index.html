@@ -24,10 +24,68 @@
     <link rel="stylesheet" href="./output.css" />
   </head>
 
-  <body class="bg-gray-100 dark:bg-gray-900 space-y-4 py-8">
+  <body class="bg-gray-100 dark:bg-gray-900 space-y-4 py-8 transition-all duration-100 ease-in-out">
     <button id="darkBtn" class="dark:text-white fixed right-4 top-4 text-3xl">
       <i class="fa-solid fa-moon"></i>
     </button>
+
+    <section
+      id="container__dropdownComponent"
+      class="container mx-auto px-4 py-2 space-y-2"
+    >
+      <h1 class="font-bold text-xl dark:text-white">Dropdown Component</h1>
+
+      <div class="relative">
+        <button
+        id="dropdown__button"
+          class="dark:bg-gray-800 dark:text-white border-2 border-gray-200 dark:border-gray-700 active:scale-95 px-3 py-2 text-sm rounded-md shadow transition duration-100 ease-in-out"
+        >
+          Dropdown <i class="fa-solid fa-caret-down"></i>
+        </button>
+        <div
+          id="dropdown__menu"
+          class="absolute hidden z-50 bg-white dark:bg-gray-800 dark:text-white w-80 border-2 border-gray-200 rounded-md shadow-md *:list-none"
+        >
+          <li>
+            <a
+              href="#container__dropdownComponent"
+              class="block hover:bg-sky-200 hover:text-black w-full h-full px-4 py-1 transition duration-200 ease-in-out"
+              >Dropdown Component</a
+            >
+          </li>
+          <li>
+            <a
+              href="#container__inputComponent"
+              class="block hover:bg-sky-200 hover:text-black w-full h-full px-4 py-1 transition duration-200 ease-in-out"
+              >Input Component</a
+            >
+          </li>
+          <li>
+            <a
+              href="#container__badgeComponent"
+              class="block hover:bg-sky-200 hover:text-black w-full h-full px-4 py-1 transition duration-200 ease-in-out"
+              >Badge/Tag Component</a
+            >
+          </li>
+          <li>
+            <a
+              href="#container__buttonComponent"
+              class="block hover:bg-sky-200 hover:text-black w-full h-full px-4 py-1 transition duration-200 ease-in-out"
+              >Button Component</a
+            >
+          </li>
+          <li>
+            <a
+              href="#container__cardComponent"
+              class="block hover:bg-sky-200 hover:text-black w-full h-full px-4 py-1 transition duration-200 ease-in-out"
+              >Card Component</a
+            >
+          </li>
+        </div>
+      </div>
+    </section>
+
+    <hr />
 
     <section
       id="container__inputComponent"
@@ -189,11 +247,17 @@
       const button__showPassword = document.getElementById(
         "button__showPassword"
       );
+      const dropdown__button = document.getElementById("dropdown__button");
+      const dropdown__menu = document.getElementById("dropdown__menu");
 
       darkBtn.addEventListener("click", () => {
         document.querySelector("html").classList.toggle("dark");
         darkBtn.querySelector("i").classList.replace("fa-moon", "fa-sun");
         darkBtn.querySelector("i").classList.replace("fa-sun", "fa-moon");
+      });
+
+      dropdown__button.addEventListener("click", () => {
+        dropdown__menu.classList.toggle("hidden");
       });
 
       button__showPassword.addEventListener("click", () => {
