@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      href="https://bradlc.gallerycdn.vsassets.io/extensions/bradlc/vscode-tailwindcss/0.2.0/1558040563649/Microsoft.VisualStudio.Services.Icons.Default"
+      type="image/x-icon"
+    />
+    <title>Login</title>
+
+    <link
+      rel="stylesheet"
+      9
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- TailWind CSS -->
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="min-h-dvh w-dvw grid place-items-center bg-gray-300 dark:bg-gray-900">
+    <button id="darkBtn" class="dark:text-white fixed right-4 top-4 text-3xl">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <main class="max-w-2xl bg-white dark:bg-gray-800 dark:text-white container rounded-md shadow-md p-8">
+      <h1 class="text-xl font-bold text-center">Login</h1>
+
+      <form action="#" class="space-y-4">
+        <div class="input-group flex flex-col">
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            class="dark:bg-gray-800 dark:text-white border-2 border-gray-200 dark:border-gray-700 focus:border-sky-500 focus:ring-2 focus:ring-sky-500 focus:ring-opacity-10 px-3 py-2 text-base rounded-md transition duration-200 ease-in-out focus:outline-none placeholder:opacity-50"
+            id="email"
+            name="email"
+            placeholder="Digite seu e-mail"
+          />
+        </div>
+
+        <div class="input-group flex flex-col">
+          <label for="input__password">Senha</label>
+          <div
+            class="flex justify-between items-center gap-4 bg-white dark:bg-gray-800 dark:text-white border-2 border-gray-200 dark:border-gray-700 focus-within:border-sky-500 focus-within:ring-2 focus-within:ring-sky-500 focus-within:ring-opacity-10 px-4 py-2 text-lg rounded-md transition duration-200 ease-in-out flex-1"
+          >
+            <input
+              type="password"
+              id="input__password"
+              class="w-full bg-transparent focus:outline-none placeholder:opacity-50"
+              placeholder="Digite sua senha..."
+            />
+            <i
+              id="button__showPassword"
+              class="fa-solid fa-eye text-xl select-none"
+            ></i>
+          </div>
+        </div>
+
+        <div class="flex justify-between">
+          <label for="remember" class="flex items-center">
+            <input type="checkbox" id="remember" class="mr-2" name="remember" />
+            Lembrar-me
+          </label>
+          <a href="#" class="text-sky-500 hover:underline"
+            >Esqueci minha senha</a
+          >
+        </div>
+
+        <button
+          type="submit"
+          class="w-full sm:w-fit bg-sky-500 hover:bg-sky-600 text-white dark:text-black text-base px-5 py-2 rounded shadow active:ring-2 active:scale-90"
+        >
+          Entrar
+        </button>
+      </form>
+    </main>
+
+    <script>
+      const darkBtn = document.getElementById("darkBtn");
+      const input__password = document.getElementById("input__password");
+      const button__showPassword = document.getElementById(
+        "button__showPassword"
+      );
+
+      darkBtn.addEventListener("click", () => {
+        document.querySelector("html").classList.toggle("dark");
+        darkBtn.querySelector("i").classList.replace("fa-moon", "fa-sun");
+        darkBtn.querySelector("i").classList.replace("fa-sun", "fa-moon");
+      });
+
+      button__showPassword.addEventListener("click", () => {
+        if (input__password.type === "password") {
+          input__password.type = "text";
+          button__showPassword.classList.replace("fa-eye", "fa-eye-slash");
+        } else {
+          input__password.type = "password";
+          button__showPassword.classList.replace("fa-eye-slash", "fa-eye");
+        }
+      });
+    </script>
+  </body>
+</html>
