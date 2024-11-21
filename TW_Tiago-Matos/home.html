@@ -25,16 +25,97 @@
   </head>
 
   <body>
-    <header class="container flex items-center justify-between mx-auto px-4 h-24">
-        <div class="font-black text-xl">
-            LOGO
-        </div>
-        <nav class="flex gap-4">
-            <a href="#" class="text-sm text-gray-600 hover:text-gray-800 hover:underline">Como reservar</a>
-            <a href="#" class="text-sm text-gray-600 hover:text-gray-800 hover:underline">Sobre nós</a>
-            <a href="#" class="text-sm text-gray-600 hover:text-gray-800 hover:underline">Informações</a>
-            <a href="#" class="text-sm text-gray-600 hover:text-gray-800 hover:underline">Contato</a>
-        </nav>
+    <header
+      class="container flex items-center justify-between mx-auto px-4 h-24"
+    >
+      <div class="font-black text-xl">LOGO</div>
+      <nav class="flex gap-4">
+        <a
+          href="#"
+          class="text-sm text-gray-600 hover:text-gray-800 hover:underline"
+          >Como reservar</a
+        >
+        <a
+          href="#"
+          class="text-sm text-gray-600 hover:text-gray-800 hover:underline"
+          >Sobre nós</a
+        >
+        <a
+          href="#"
+          class="text-sm text-gray-600 hover:text-gray-800 hover:underline"
+          >Informações</a
+        >
+        <a
+          href="#"
+          class="text-sm text-gray-600 hover:text-gray-800 hover:underline"
+          >Contato</a
+        >
+      </nav>
     </header>
+
+    <section
+      class="bg-no-repeat bg-cover bg-center grid place-items-center"
+      style="background-image: url('./src/images/bg001.jpg'); height: 450px"
+    >
+      <div class="text-center space-y-2">
+        <h1 class="text-4xl text-white font-semibold">
+          Onde você quer se hospedar hoje?
+        </h1>
+        <p class="text-gray-200">
+          Escolha o melhor lugar para você e sua família
+        </p>
+      </div>
+
+      <form action="#" class="space-x-2">
+        <select
+          name="estado"
+          id="estado"
+          class="dark:bg-gray-800 dark:text-white border-2 border-gray-200 dark:border-gray-700 active:scale-95 px-3 py-2 text-sm rounded-md shadow transition duration-75 ease-in-out"
+        >
+          <option value="">Escolha o estado</option>
+          <option value="ac">Acre</option>
+          <option value="al">Alagoas</option>
+          <option value="ap">Amapá</option>
+          <option value="am">Amazonas</option>
+          <option value="ba">Bahia</option>
+          <option value="ce">Ceará</option>
+          <option value="df">Distrito Federal</option>
+          <option value="es">Espírito Santo</option>
+          <option value="go">Goiás</option>
+          <option value="ma">Maranhão</option>
+          <option value="mt">Mato Grosso</option>
+          <option value="ms">Mato Grosso do Sul</option>
+          <option value="mg">Minas Gerais</option>
+          <option value="pa">Pará</option>
+          <option value="pb">Paraíba</option>
+          <option value="pr">Paraná</option>
+          <option value="pe">Pernambuco</option>
+          <option value="pi">Piauí</option>
+          <option value="rj">Rio de Janeiro</option>
+          <option value="rn">Rio Grande do Norte</option>
+          <option value="rs">Rio Grande do Sul</option>
+          <option value="ro">Rondônia</option>
+          <option value="rr">Roraima</option>
+          <option value="sc">Santa Catarina</option>
+          <option value="se">Sergipe</option>
+          <option value="sp">São Paulo</option>
+          <option value="to">Tocantins</option>
+        </select>
+
+        <select
+          name="cidade"
+          id="cidade"
+          class="dark:bg-gray-800 dark:text-white border-2 border-gray-200 dark:border-gray-700 active:scale-95 px-3 py-2 text-sm rounded-md shadow transition duration-75 ease-in-out"
+        >
+          <option value="">Escolha a cidade</option>
+        </select>
+
+        <button
+          class="bg-sky-500 hover:bg-sky-600 text-white dark:text-black text-base px-5 py-2 rounded shadow active:ring-2 active:scale-90"
+        >
+          Pesquisar
+        </button>
+      </form>
+    </section>
   </body>
 </html>
