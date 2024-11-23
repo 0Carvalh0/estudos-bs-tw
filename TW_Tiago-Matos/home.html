@@ -72,7 +72,7 @@
           id="estado"
           class="dark:bg-gray-800 dark:text-white border-2 border-gray-200 dark:border-gray-700 active:scale-95 px-3 py-2 text-sm rounded-md shadow transition duration-75 ease-in-out"
         >
-          <option value="">Escolha o estado</option>
+          <option value="" disabled selected>Escolha o estado</option>
           <option value="ac">Acre</option>
           <option value="al">Alagoas</option>
           <option value="ap">Amapá</option>
@@ -111,11 +111,28 @@
         </select>
 
         <button
-          class="bg-sky-500 hover:bg-sky-600 text-white dark:text-black text-base px-5 py-2 rounded shadow active:ring-2 active:scale-90"
+          class="inline-flex items-center bg-sky-500 hover:bg-sky-600 text-white dark:text-black text-base px-5 py-2 gap-2 rounded shadow active:ring-2 active:scale-90"
         >
-          Pesquisar
+          <i class="fa-solid fa-magnifying-glass"></i>Pesquisar
         </button>
       </form>
+    </section>
+
+    <section class="container grid grid-cols-2 gap-6 place-items-stretch text-gray-600 p-10 mx-auto">
+      <section class="space-y-2">
+        <p class="font-medium text-gray-400 uppercase">Resort em destaque</p>
+        <h2 class="text-2xl font-bold">Ecoresort Praia do Forte Bahia</h2>
+        <p class="font-medium text-gray-400">Hotel qualidade 5 estrelas</p>
+        <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias similique ab velit eligendi blanditiis ex voluptas tenetur distinctio, voluptatum cupiditate sequi numquam, tempora cum culpa iusto, mollitia quos sed iure.</p>
+        <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias similique ab velit eligendi blanditiis ex voluptas tenetur distinctio, voluptatum cupiditate sequi numquam, tempora cum culpa iusto, mollitia quos sed iure.</p>
+        <a href="#"
+          class="inline-flex items-center bg-sky-500 hover:bg-sky-600 text-white dark:text-black text-base px-5 py-2 gap-2 rounded shadow active:ring-2 active:scale-90"
+        >
+          Solicitar reserva<i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </section>
+
+      <img src="./src/images/bg001.jpg" alt="Imagem resort">
     </section>
   </body>
 </html>
