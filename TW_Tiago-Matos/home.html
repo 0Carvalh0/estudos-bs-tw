@@ -26,10 +26,20 @@
 
   <body>
     <header
-      class="container flex items-center justify-between mx-auto px-4 h-24"
+      class="container max-w-5xl flex items-center justify-between mx-auto px-4 h-24"
     >
       <div class="font-black text-4xl">LOGO</div>
-      <nav class="flex gap-4">
+
+      <button
+        id="button__Hamburguer"
+        class="grid place-items-center sm:hidden text-2xl"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav
+        id="list__hamburguer"
+        class="absolute top-24 sm:top-0 -right-32 sm:right-0 sm:relative gap-4 bg-gray-300 sm:bg-transparent px-4 py-2 sm:p-0 flex flex-col sm:flex-row"
+      >
         <a
           href="#"
           class="text-sm text-gray-600 hover:text-gray-800 hover:underline"
@@ -66,7 +76,10 @@
         </p>
       </div>
 
-      <form action="#" class="space-x-2">
+      <form
+        action="#"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2"
+      >
         <select
           name="estado"
           id="estado"
@@ -111,7 +124,7 @@
         </select>
 
         <button
-          class="inline-flex items-center bg-sky-500 hover:bg-sky-600 text-white dark:text-black text-base px-5 py-2 gap-2 rounded shadow active:ring-2 active:scale-90"
+          class="inline-flex items-center justify-center bg-sky-500 hover:bg-sky-600 text-white dark:text-black text-base px-5 py-2 col-span-1 sm:col-span-2 md:col-span-1 gap-2 rounded shadow active:ring-2 active:scale-90"
         >
           <i class="fa-solid fa-magnifying-glass"></i>Pesquisar
         </button>
@@ -119,9 +132,9 @@
     </section>
 
     <section
-      class="container grid grid-cols-2 gap-6 place-items-stretch text-gray-600 p-10 mx-auto"
+      class="container max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-6 place-items-stretch text-gray-600 px-4 mt-6 md:p-10 mx-auto"
     >
-      <section class="space-y-2">
+      <section class="space-y-2 order-2 md:order-1">
         <p class="font-medium text-gray-400 uppercase">Resort em destaque</p>
         <h2 class="text-2xl font-bold">Ecoresort Praia do Forte Bahia</h2>
         <p class="font-medium text-gray-400">Hotel qualidade 5 estrelas</p>
@@ -145,16 +158,22 @@
         </a>
       </section>
 
-      <img src="./src/images/resort01.jpg" alt="Imagem resort" />
+      <img
+        src="./src/images/resort01.jpg"
+        alt="Imagem resort"
+        class="order-1 md:order-2"
+      />
     </section>
 
-    <section class="container mx-auto px-10 py-6 space-y-6">
+    <section class="container max-w-5xl mx-auto px-10 py-6 space-y-6">
       <h1 class="col-span-4 text-center text-2xl font-bold text-gray-600">
         Conheça mais resorts
       </h1>
 
-      <section class="grid grid-cols-4 grid-rows-2 gap-6">
-        <div class="rounded overflow-hidden relative col-span-2 row-span-2">
+      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          class="rounded overflow-hidden relative lg:col-span-2 lg:row-span-2"
+        >
           <h3 class="absolute z-50 bottom-4 left-4 text-white font-bold">
             Beach Park Resort
           </h3>
@@ -167,7 +186,7 @@
             class="thumbImage object-cover h-full w-full"
           />
         </div>
-        <div class="rounded overflow-hidden relative col-span-2">
+        <div class="rounded overflow-hidden relative lg:col-span-2">
           <h3 class="absolute z-50 bottom-4 left-4 text-white font-bold">
             Salinas do Maragogi Resort
           </h3>
@@ -177,7 +196,7 @@
           />
           <img
             src="./src/images/resort03.jpg"
-            class="thumbImage object-cover h-full max-h-60 w-full"
+            class="thumbImage object-cover h-full lg:max-h-60 w-full"
           />
         </div>
         <div class="rounded overflow-hidden relative">
@@ -210,7 +229,10 @@
     </section>
 
     <section class="grid place-items-center py-12">
-      <form action="#" class="space-x-2">
+      <form
+        action="#"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2"
+      >
         <select
           name="estado"
           id="estado"
@@ -255,20 +277,35 @@
         </select>
 
         <button
-          class="inline-flex items-center bg-sky-500 hover:bg-sky-600 text-white dark:text-black text-base px-5 py-2 gap-2 rounded shadow active:ring-2 active:scale-90"
+          class="inline-flex items-center justify-center bg-sky-500 hover:bg-sky-600 text-white dark:text-black text-base px-5 py-2 col-span-1 sm:col-span-2 md:col-span-1 gap-2 rounded shadow active:ring-2 active:scale-90"
         >
           <i class="fa-solid fa-magnifying-glass"></i>Pesquisar
         </button>
       </form>
     </section>
 
-    <footer class="flex justify-between px-16 py-8 border-t-2 border-gray-200">
-      <div class="font-black text-4xl text-gray-400">LOGO</div>
-
-      <div class="flex items-center gap-2 text-3xl text-gray-400">
-        <a href="#"><i class="fa-brands fa-square-facebook"></i></a
-        ><a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+    <footer class="border-t-2 border-gray-200">
+      <div class="container max-w-5xl flex justify-between px-8 py-8 mx-auto">
+        <div class="font-black text-4xl text-gray-400">LOGO</div>
+        <div class="flex items-center gap-2 text-3xl text-gray-400">
+          <a href="#"><i class="fa-brands fa-square-facebook"></i></a
+          ><a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
       </div>
     </footer>
+
+    <script>
+      const btnHamburguer = document.querySelector("#button__Hamburguer");
+
+      btnHamburguer.addEventListener("click", () => {
+        const nav = document.querySelector("#list__hamburguer");
+
+        if (nav.classList.contains("-right-32")) {
+          nav.classList.replace("-right-32", "right-0");
+        } else {
+          nav.classList.replace("right-0", "-right-32");
+        }
+      });
+    </script>
   </body>
 </html>
