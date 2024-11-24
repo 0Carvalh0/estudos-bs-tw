@@ -28,7 +28,7 @@
     <header
       class="container flex items-center justify-between mx-auto px-4 h-24"
     >
-      <div class="font-black text-xl">LOGO</div>
+      <div class="font-black text-4xl">LOGO</div>
       <nav class="flex gap-4">
         <a
           href="#"
@@ -208,5 +208,67 @@
         </div>
       </section>
     </section>
+
+    <section class="grid place-items-center py-12">
+      <form action="#" class="space-x-2">
+        <select
+          name="estado"
+          id="estado"
+          class="dark:bg-gray-800 dark:text-white border-2 border-gray-200 dark:border-gray-700 active:scale-95 px-3 py-2 text-sm rounded-md shadow transition duration-75 ease-in-out"
+        >
+          <option value="" disabled selected>Escolha o estado</option>
+          <option value="ac">Acre</option>
+          <option value="al">Alagoas</option>
+          <option value="ap">Amapá</option>
+          <option value="am">Amazonas</option>
+          <option value="ba">Bahia</option>
+          <option value="ce">Ceará</option>
+          <option value="df">Distrito Federal</option>
+          <option value="es">Espírito Santo</option>
+          <option value="go">Goiás</option>
+          <option value="ma">Maranhão</option>
+          <option value="mt">Mato Grosso</option>
+          <option value="ms">Mato Grosso do Sul</option>
+          <option value="mg">Minas Gerais</option>
+          <option value="pa">Pará</option>
+          <option value="pb">Paraíba</option>
+          <option value="pr">Paraná</option>
+          <option value="pe">Pernambuco</option>
+          <option value="pi">Piauí</option>
+          <option value="rj">Rio de Janeiro</option>
+          <option value="rn">Rio Grande do Norte</option>
+          <option value="rs">Rio Grande do Sul</option>
+          <option value="ro">Rondônia</option>
+          <option value="rr">Roraima</option>
+          <option value="sc">Santa Catarina</option>
+          <option value="se">Sergipe</option>
+          <option value="sp">São Paulo</option>
+          <option value="to">Tocantins</option>
+        </select>
+
+        <select
+          name="cidade"
+          id="cidade"
+          class="dark:bg-gray-800 dark:text-white border-2 border-gray-200 dark:border-gray-700 active:scale-95 px-3 py-2 text-sm rounded-md shadow transition duration-75 ease-in-out"
+        >
+          <option value="">Escolha a cidade</option>
+        </select>
+
+        <button
+          class="inline-flex items-center bg-sky-500 hover:bg-sky-600 text-white dark:text-black text-base px-5 py-2 gap-2 rounded shadow active:ring-2 active:scale-90"
+        >
+          <i class="fa-solid fa-magnifying-glass"></i>Pesquisar
+        </button>
+      </form>
+    </section>
+
+    <footer class="flex justify-between px-16 py-8 border-t-2 border-gray-200">
+      <div class="font-black text-4xl text-gray-400">LOGO</div>
+
+      <div class="flex items-center gap-2 text-3xl text-gray-400">
+        <a href="#"><i class="fa-brands fa-square-facebook"></i></a
+        ><a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+      </div>
+    </footer>
   </body>
 </html>
